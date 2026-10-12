@@ -1,57 +1,72 @@
 # IBM MQ Clustering Lab
 
-A beginner-friendly, hands-on learning repository for IBM MQ clustering.
+A beginner-friendly, hands-on learning repository to understand IBM MQ clustering through practical examples, configuration exercises, and troubleshooting scenarios.
 
-## Goals
+## Learning Objectives
 
-- Understand IBM MQ cluster architecture and terminology.
-- Build a cluster with two Full Repository queue managers and one Partial Repository queue manager.
-- Configure cluster channels and cluster queues.
-- Observe message routing and workload balancing.
-- Troubleshoot common clustering issues.
-- Practice safe operational procedures.
+* Understand IBM MQ clustering architecture and core concepts.
+* Learn the roles of Full Repository and Partial Repository queue managers.
+* Configure cluster sender and cluster receiver channels.
+* Create and configure cluster queues.
+* Understand message routing and workload balancing.
+* Troubleshoot common clustering issues.
+* Learn clustering configuration and operational best practices.
 
-## Planned Lab Environment
+## Lab Architecture
 
-| Node | Queue Manager | Role |
-|---|---|---|
-| Node 1 | CLQM1 | Full Repository |
-| Node 2 | CLQM2 | Full Repository |
-| Node 3 | CLQM3 | Partial Repository |
+The initial lab uses three queue managers:
 
-Cluster name: `MQCLUSTER`
+| Queue Manager | Role               |
+| ------------- | ------------------ |
+| CLQM1         | Full Repository    |
+| CLQM2         | Full Repository    |
+| CLQM3         | Partial Repository |
 
-The example names are configurable. Verify your existing queue managers, network,
-ports, firewall rules, and system resources before running commands.
+**Cluster name:** `MQCLUSTER`
+
+The architecture and queue manager names are examples. You can adapt them to your own lab environment.
+
+## Prerequisites
+
+* IBM MQ installed on Linux systems or virtual machines.
+* Basic understanding of queue managers, local queues, and MQ channels.
+* Access to configure and administer the queue managers.
+* Network connectivity between the systems.
+* Basic Linux command-line knowledge.
 
 ## Learning Path
 
-1. [Prerequisites and Environment](labs/lab-01-prerequisites-and-environment/README.md)
-2. [MQ Clustering Fundamentals](labs/lab-02-mq-clustering-fundamentals/README.md)
-3. [Queue Manager Creation](labs/lab-03-queue-manager-creation/README.md)
-4. [Full and Partial Repositories](labs/lab-04-full-and-partial-repositories/README.md)
-5. [Cluster Channels](labs/lab-05-cluster-channels/README.md)
-6. [Cluster Queues](labs/lab-06-cluster-queues/README.md)
-7. [Message Routing](labs/lab-07-message-routing/README.md)
-8. [Workload Balancing](labs/lab-08-workload-balancing/README.md)
-9. [Cluster Troubleshooting](labs/lab-09-cluster-troubleshooting/README.md)
-10. [Failure Scenarios](labs/lab-10-failure-scenarios/README.md)
-11. [Security and Best Practices](labs/lab-11-security-and-best-practices/README.md)
-12. [Advanced Capstone](labs/lab-12-advanced-capstone/README.md)
+1. Prerequisites and Environment
+2. MQ Clustering Fundamentals
+3. Queue Manager Creation
+4. Full and Partial Repositories
+5. Cluster Channels
+6. Cluster Queues
+7. Message Routing
+8. Workload Balancing
+9. Cluster Troubleshooting
+10. Failure Scenarios
+11. Security and Best Practices
+12. Advanced Capstone
 
-## Safety
+## Lab Environment
 
-- Do not modify existing production or RDQM queue managers for these exercises.
-- Verify queue manager names, ports, and data paths before executing commands.
-- Never commit passwords, certificates with private keys, customer data, or sensitive diagnostic output.
-- Perform failure testing only in an isolated lab.
+The examples are developed and tested incrementally. Commands, configuration examples, and expected outputs will be documented as the labs are completed.
 
-## Compatibility
+Your environment may differ depending on the IBM MQ version, operating system, network configuration, and deployment architecture.
 
-The initial lab is being developed using IBM MQ 9.4.0.20 on RHEL 9.8.
-Some commands and configuration details may vary by environment.
+## Repository Structure
+
+* `labs/` — Step-by-step practical exercises.
+* `docs/` — Architecture, concepts, glossary, and reference documentation.
+* `diagrams/` — Architecture and message-flow diagrams.
+* `scripts/` — Reusable helper scripts.
+* `config/` — Example configuration templates.
+
+## Who Is This For?
+
+This repository is intended for IBM MQ beginners, administrators, middleware engineers, and support engineers who want to develop practical knowledge of IBM MQ clustering.
 
 ## Contributions
 
-Contributions that improve explanations, reproducibility, and troubleshooting
-examples are welcome.
+Suggestions, corrections, additional examples, and troubleshooting scenarios are welcome. The goal is to make IBM MQ clustering easier to understand and practice for everyone.
