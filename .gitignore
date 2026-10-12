@@ -1,0 +1,18 @@
+# Local environment configuration
+config/lab.env
+
+# Logs and diagnostic output
+*.log
+*.out
+*.dump
+*.trc
+
+# Temporary and editor files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Local lab output
+labs/*/expected-output/*
+!labs/*/expected-output/.gitkeep
